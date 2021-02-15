@@ -13,7 +13,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule
 
   ],
-  exports:[NgbModule],
+  exports:[NgbModule,
+    HeaderComponent, FooterComponent
+  ],
   entryComponents:[]
 })
 export class SharedModule { }

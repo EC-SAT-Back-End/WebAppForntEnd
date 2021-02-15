@@ -2,3 +2,36 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+
+
+// / You can add global styles to this file, and also import other style files /
+// @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+// @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+// Your variable overrides
+$theme-colors: (
+"primary": #d72323,
+// "primary": #6610f2,
+
+// "danger": #e74c3c,
+// "danger":#dc3545,
+"danger":#6610f2,
+
+"success": #2ecc71,
+"secondary": #6c757d,
+"info": #26b2fa,
+"warning": #ffc107,
+"dark": #2c3e50,
+"white": #ffffff,
+"light": #ffffff,
+"red-flate": #ffa87d,
+"red-flate1": #ff7588,
+"gray-bg":#fafafa
+);
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// .toast-success {
+// background-color: #26b2fa;
+// }

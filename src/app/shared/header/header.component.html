@@ -1,1 +1,78 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary  fixed-top">
+  <div class="container-fluid">
+      <!-- <a class="navbar-brand font-weight-bolder"  routerLinkActive="active"
+         href="/Default/Home">
+          <img src="assets/img/logo.png" class="avatar">
+          routerLink="/Default/Home"
+          EC-SAT
+          <small class="d-block">E-Commerce</small>
+      </a> -->
+      <img href="/Default/Home" type="button" src="assets\img\logoLast.png" class="avatar" routerLink="/Default/Home">
+
+      <li class="nav-item d-block d-sm-none" >
+          <a routerLink="/Default/Home"><i class="fa fa-home text-white" aria-hidden="true"></i></a>
+          <a  class="nav-link includer" routerLink="/User/Cart" routerLinkActive="active"
+              >
+              <i class="shopping-cart mmm"></i>
+              <span class="badge badge-warning mm">10</span>
+          </a>
+      </li>
+      <button  class="navbar-toggler align-self-center" type="button">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div  class="collapse navbar-collapse mx-auto">
+          <ul class="navbar-nav mx-auto">
+              <li class="nav-item m-1" >
+                  <a class="nav-link" routerLink="/Default/Home" routerLinkActive="active"
+                      >Home
+                  </a>
+              </li>
+              <li class="nav-item m-1" >
+                  <a class="nav-link" routerLink="/Default/Shopping" routerLinkActive="active"
+                      >Shop
+                  </a>
+              </li>
+              <li class="nav-item m-1" >
+                <a class="nav-link" routerLink="/Default/Shopping" routerLinkActive="active"
+                    >Deals
+                </a>
+            </li>
+              <li class="nav-item m-1 " >
+                  <a class="nav-link" routerLink="/Admin" routerLinkActive="active">Admin</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav align-self-center">
+              <li class="nav-item d-none d-sm-block">
+                  <a  class="nav-link includer"  routerLink="/User/Cart" routerLinkActive="active"
+                      >
+                      <i  class="shopping-cart nnn"></i>
+                      <span class="badge badge-warning nn"></span>
+                  </a>
+              </li>
+
+              <li ngbDropdown class="nav-item" placement="bottom-left">
+                  <a type="button" href (click)="false" class="nav-link btn btn-sm" ngbDropdownToggle
+                   data-toggle="tooltip" data-placement="bottom" >Hello Nancy
+                      <!-- <img  class="avatar d-inline-block align-top"> -->
+                  </a>
+                  <div ngbDropdownMenu class="mr-lg-5 pr-lg-5" style="margin-right: 100px;">
+                      <button ngbDropdownItem routerLink="/Default/wishList">Wish List</button>
+                      <button  ngbDropdownItem routerLink="/Auth/LogIn">
+                          <i class="fa fa-sign-in" aria-hidden="true"></i> Login
+                      </button>
+                      <button  ngbDropdownItem routerLink="/Auth/SignUp">
+                          <i class="fa fa-registered" aria-hidden="true"></i> Signup
+                      </button>
+                      <div class="dropdown-divider"></div>
+                      <button  ngbDropdownItem >
+                          <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button>
+                  </div>
+              </li>
+              <i class="fa fa-user fa-2x pt-2 text-light" aria-hidden="true"></i>
+          </ul>
+      </div>
+  </div>
+</nav>
+

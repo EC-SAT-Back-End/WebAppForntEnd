@@ -3,13 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { DefaultRoutingModule } from './default-routing.module';
 import { DefaultComponent } from './default.component';
+import { HomeComponent } from '../../components/home/home.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
-  declarations: [DefaultComponent],
+  declarations: [DefaultComponent, HomeComponent],
   imports: [
     CommonModule,
-    DefaultRoutingModule
+    DefaultRoutingModule,
+    SharedModule
   ]
 })
 export class DefaultModule { }
