@@ -10,4 +10,42 @@ a{
   border-radius: 50%;
 }
 
+// .avatar {
+//   vertical-align: middle;
+//   width: 30px;
+//   height: 30px;
+//   border-radius: 50%;
+//   }
+  .m-1{
+  font-weight: bold;
+  }
+  // .navbar-nav > li > a:hover
+  // .navbar-nav > li > a:focus
+  // {
+  // background-color: white;
+  // color: blueviolet;
+  // border-radius: 10%;
+  // }
+  // padeg css
+  .includer{
+  position: relative;
+  }
+  .badge.badge-warning{
+  position: absolute;
+  top: -3px;
+  font-size: 10px;
+  }
+  // padeg css
+  // <!-- animate cart -->
 
+  .shopping-cart {
+  display: inline-block;
+  background: url(../../../assets/img/cart.png) no-repeat 0 0;
+  width: 24px;
+  height: 24px;
+  margin: 0 0 0 0;
+  text-align: center;
+  }
+  // <!-- animate cart -->
+
+  // src\assets\img\cart.png
