@@ -9,7 +9,7 @@
       </a> -->
       <img href="/Default/Home" type="button" src="assets\img\logoLast.png" class="avatar" routerLink="/Default/Home">
 
-      <li class="nav-item d-block d-sm-none" >
+      <li class="nav-item d-block d-sm-none" (click)="toggleNavbar()">
           <a routerLink="/Default/Home"><i class="fa fa-home text-white" aria-hidden="true"></i></a>
           <a  class="nav-link includer" routerLink="/User/Cart" routerLinkActive="active"
               >
@@ -17,30 +17,31 @@
               <span class="badge badge-warning mm">10</span>
           </a>
       </li>
-      <button  class="navbar-toggler align-self-center" type="button">
+      <button  class="navbar-toggler align-self-center" type="button" (click)="toggleNavbar()">
           <span class="navbar-toggler-icon"></span>
       </button>
 
 
-      <div  class="collapse navbar-collapse mx-auto">
+      <div  class="collapse navbar-collapse mx-auto" [class.show]="isCollapse">
           <ul class="navbar-nav mx-auto">
               <li class="nav-item m-1" >
-                  <a class="nav-link" routerLink="/Default/Home" routerLinkActive="active"
-                      >Home
+                  <a class="nav-link active" routerLink="/Default/Home" routerLinkActive="active"
+                  [routerLinkActiveOptions]="{exact: true}" (click)="toggleNavbar()">Home
                   </a>
               </li>
               <li class="nav-item m-1" >
                   <a class="nav-link" routerLink="/Default/Shopping" routerLinkActive="active"
-                      >Shop
+                  [routerLinkActiveOptions]="{exact: true}" (click)="toggleNavbar()">Shop
                   </a>
               </li>
               <li class="nav-item m-1" >
                 <a class="nav-link" routerLink="/Default/Shopping" routerLinkActive="active"
-                    >Deals
+                [routerLinkActiveOptions]="{exact: true}" (click)="toggleNavbar()">Deals
                 </a>
             </li>
               <li class="nav-item m-1 " >
-                  <a class="nav-link" routerLink="/Admin" routerLinkActive="active">Admin</a>
+                  <a class="nav-link" routerLink="/Admin" routerLinkActive="active"
+                  [routerLinkActiveOptions]="{exact: true}" (click)="toggleNavbar()">Admin</a>
               </li>
           </ul>
           <ul class="navbar-nav align-self-center">
@@ -76,3 +77,77 @@
   </div>
 </nav>
 
+
+<!-- navbare -->
+<!-- <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+  <div class="container-fluid">
+
+      <a class="navbar-brand font-weight-bolder"  routerLinkActive="active"
+         href="https://ahmedbreak-hm.github.io/PortfolioBreak" target="_blank">
+
+          AhmedBreak
+          <small class="d-block">E-Commerce</small>
+      </a>
+
+      <li class="nav-item d-block d-sm-none" (click)="togglenavbar()">
+          <a routerLink="/Default/Home"><i class="fa fa-home" aria-hidden="true"></i></a>
+          <a  class="nav-link includer" routerLink="/User/Cart" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}" (click)="togglenavbar()">
+              <i class="shopping-cart mmm"></i>
+              <span class="badge badge-warning mm">{{cartItem}}</span>
+          </a>
+      </li>
+      <button (click)="togglenavbar()" class="navbar-toggler align-self-center" type="button">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div [class.show]="isopen" class="collapse navbar-collapse">
+          <ul class="navbar-nav mx-auto">
+              <li class="nav-item m-1" (click)="togglenavbar()">
+                  <a class="nav-link" routerLink="/Default/Home" routerLinkActive="active"
+                      [routerLinkActiveOptions]="{exact: true}">Home
+                  </a>
+              </li>
+              <li class="nav-item m-1" (click)="togglenavbar()">
+                  <a class="nav-link" routerLink="/Default/Shopping" routerLinkActive="active"
+                      [routerLinkActiveOptions]="{exact: true}">Shopping
+                  </a>
+              </li>
+              <li class="nav-item m-1 " (click)="togglenavbar()">
+                  <a class="nav-link" routerLink="/Admin" routerLinkActive="active">Admin</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav align-self-center">
+              <li class="nav-item d-none d-sm-block">
+                  <a  class="nav-link includer"  routerLink="/User/Cart" routerLinkActive="active"
+                      [routerLinkActiveOptions]="{exact: true}">
+                      <i  class="shopping-cart nnn"></i>
+                      <span class="badge badge-warning nn">{{cartItem}}</span>
+                  </a>
+              </li>
+
+              <li ngbDropdown class="nav-item pr-3">
+                  <a href (click)="false" class="nav-link" ngbDropdownToggle
+                   data-toggle="tooltip" data-placement="bottom" [title]="userName === ''? 'Please Sign In' :'Welcome ' + userName">
+                      <img [src]="photoURL !=''?photoURL:'assets/img/avatar.png' " class="avatar d-inline-block align-top">
+                  </a>
+                  <div ngbDropdownMenu>
+                      <button ngbDropdownItem routerLink="/Default/wishList">Wish List</button>
+                      <button *ngIf="!isUser" ngbDropdownItem routerLink="/Auth/LogIn">
+                          <i class="fa fa-sign-in" aria-hidden="true"></i> Login
+                      </button>
+                      <button *ngIf="!isUser" ngbDropdownItem routerLink="/Auth/SignUp">
+                          <i class="fa fa-registered" aria-hidden="true"></i> Signup
+                      </button>
+                      <div *ngIf="isUser" class="dropdown-divider"></div>
+                      <button *ngIf="isUser" ngbDropdownItem (click)="Logout()">
+                          <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button>
+                  </div>
+              </li>
+          </ul>
+
+      </div>
+
+  </div>
+  </nav> -->

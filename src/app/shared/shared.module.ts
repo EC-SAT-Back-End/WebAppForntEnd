@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FirebaseModule } from '../firebase.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,7 +13,8 @@ import { FirebaseModule } from '../firebase.module';
   imports: [
     CommonModule,
     NgbModule,
-    FirebaseModule
+    RouterModule,
+    FirebaseModule,
 
   ],
   exports:[NgbModule,

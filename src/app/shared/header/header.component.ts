@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  isCollapse: boolean =false;
   constructor() { }
   ngOnInit(): void {
+  }
+  toggleNavbar(){
+    this.isCollapse= !this.isCollapse;
+    console.log('beb');
   }
 
 }
