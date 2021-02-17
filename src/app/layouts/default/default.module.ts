@@ -6,6 +6,8 @@ import { DefaultComponent } from './default.component';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { WidgetCarouselComponent } from './widgets/widget-carousel/widget-carousel.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { WidgetCarouselComponent } from './widgets/widget-carousel/widget-carous
   [
     DefaultComponent,
     HomeComponent,
-    WidgetCarouselComponent
+    WidgetCarouselComponent,
+    ProductListComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     CommonModule,

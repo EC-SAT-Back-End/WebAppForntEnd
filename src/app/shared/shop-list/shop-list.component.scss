@@ -1,0 +1,98 @@
+.discount {
+  color:#fff;
+  background-color:#ef5777;
+  font-size:12px;
+  text-transform:uppercase;
+  padding:2px 7px;
+  display:block;
+  position:absolute;
+  top:10px;
+  left:0;
+}
+
+.cat {
+  font-size:12px;
+  text-transform:uppercase;
+  padding:2px 7px;
+  display:block;
+  position:absolute;
+  top:10px;
+  right:0;
+  width: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+.old-price{
+  font-size: smaller;
+  color: gray;
+}
+
+
+.zoomIn{
+  overflow: hidden;
+}
+
+.zoomIn img{
+  transition: all 1.5s ease;
+  height: 200px;
+}
+.zoomIn:hover img{
+  transform: scale(1.5);
+}
+
+//  <!-- animate cart -->
+
+.item img {
+  // display: block;
+  // margin: auto;
+  border: honeydew;
+
+}
+.items {
+  // display: block;
+  // margin: 20px 0;
+  border: honeydew;
+
+}
+.item {
+  // background-color: #fff;
+  // float: left;
+  // margin: 0 10px 10px 0;
+  // width: 205px;
+  // padding: 10px;
+  border: honeydew;
+
+
+}
+//  <!-- animate cart -->
+
+
+// pagination
+.my-pagination::ng-deep .page-item.active .page-link {
+  z-index: 1;
+  color: #FFFFFF;
+  // background-color:red !important;
+  background-color: #d72323 !important;
+  border-color: #009DA0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
