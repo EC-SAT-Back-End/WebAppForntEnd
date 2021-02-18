@@ -1,0 +1,64 @@
+[
+  {
+    "id": "1002254",
+    "name": "Apple",
+    "price": "15",
+    "discount": "10",
+    "imgUrl": "assets/img/applee.jpg",
+    " categoryId": "2",
+    "categoryName": "Fruits",
+    "creatAt": "",
+    "sellerId": "",
+    "sellerNmae": ""
+  },
+  {
+    "id": "1002255",
+    "name": "Men Shirt",
+    "price": "100",
+    "discount": "3",
+    "imgUrl": "assets/img/manShirt.jpg",
+    " categoryId": "1",
+    "categoryName": "Clothes",
+    "creatAt": "",
+    "sellerId": "",
+    "sellerNmae": ""
+  },
+  {
+    "id": "1002256",
+    "name": "Men Pents",
+    "price": "150",
+    "discount": "2",
+    "imgUrl": "assets/img/menPants.jpg",
+    " categoryId": "1",
+    "categoryName": "Clothes",
+    "creatAt": "",
+    "sellerId": "",
+    "sellerNmae": ""
+  },
+  {
+    "id": "1002257",
+    "name": "Women Jacket",
+    "price": "150",
+    "discount": "2",
+    "imgUrl": "assets/img/womenKajule.jpg",
+    " categoryId": "1",
+    "categoryName": "Clothes",
+    "creatAt": "",
+    "sellerId": "",
+    "sellerNmae": ""
+  },
+  {
+    "id": "1002258",
+    "name": "Women Pants",
+    "price": "150",
+    "discount": "2",
+    "imgUrl": "assets/img/womenPants.jpg",
+    " categoryId": "1",
+    "categoryName": "Clothes",
+    "creatAt": "",
+    "sellerId": "",
+    "sellerNmae": ""
+  }
+
+
+]

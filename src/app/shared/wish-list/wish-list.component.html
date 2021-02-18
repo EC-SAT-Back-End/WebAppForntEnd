@@ -1,1 +1,92 @@
-<p>wish-list works!</p>
+<!-- <ngx-spinner bdColor="rgba(175,152,223,0.8)" size="large" color="#6b12e8" type="ball-fussion" [fullScreen]="false">
+</ngx-spinner> -->
+<div class="row">
+  <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-4"
+    *ngFor="let product of filteredProducts | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i">
+    <div class="card shadow-lg mt-3">
+      <span class="discount">10%</span>
+      <span class="cat bg-info text-white">Fruit</span>
+      <div class="zoomIn">
+        <img class="card-img-top" [src]="product">
+      </div>
+      <div class="card-body text-center">
+        <h5 class="card-text text-dark" style="font-size: 12;font-weight: bold; ">Apple</h5>
+        <p class="card-title text-primary d-inline"
+          style="font-size: 1.28571429em;font-weight: 700;line-height: 1.2857em;margin: 0;">
+          25$</p>
+        <del class="pl-2 old-price">2$</del>
+        <div>
+          <!-- <ngb-rating rate="4" class="text-warning d-block" max="5"></ngb-rating> -->
+          <i class="fa fa-star text-red-flate" aria-hidden="true"></i>
+          <i class="fa fa-star text-red-flate" aria-hidden="true"></i>
+          <i class="fa fa-star text-red-flate" aria-hidden="true"></i>
+          <i class="fa fa-star text-red-flate" aria-hidden="true"></i>
+          <i class="fa fa-star-o text-red-flate" aria-hidden="true"></i>
+
+        </div>
+      </div>
+
+      <div class="card-footer bg-white m-0 p-0" *ngIf="qty == 0 then Add else Added">
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<ngb-pagination class="my-pagination" [pageSize]="pageSize" [collectionSize]="filteredProducts.length" [(page)]="page"
+  [boundaryLinks]="true">
+</ngb-pagination>
+
+
+<!-- template -->
+<!-- template -->
+
+<ng-template #Add>
+  <div>
+    <button type="button" class="btn btn btn-primary btn-sm  w-50  d-inline">
+      View <i class="fa fa-search"></i>
+    </button>
+    <button class="btn btn-outline-primary btn-sm btn-block w-50  d-inline" (click)="addToCart()">
+      Add <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+    </button>
+  </div>
+</ng-template>
+<ng-template #Added>
+
+  <div class="btn-group">
+    <label class="btn btn-outline-primary  m-0">
+      <i class="fa fa-minus fa-lg"></i>
+    </label>
+
+    <label class="btn btn-outline-primary  text-center disabled m-0" style="width: 80%;font-weight: bolder;">55</label>
+
+    <label class="btn btn-outline-primary  m-0">
+      <i class="fa fa-plus fa-lg"></i>
+    </label>
+  </div>
+
+  <!-- Anther templete -->
+  <!-- Anther templete -->
+  <!-- Anther templete -->
+
+  <!-- <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text text-white bg-primary btn btn-primary fa fa-minus " type="button"
+        id="basic-addon1"></span>
+    </div>
+    <input type="text" class="form-control text-primary text-center" readonly value="55">
+
+    <div class="input-group-prepend">
+      <span class="input-group-text text-white bg-primary btn btn-primary fa fa-plus " type="button"
+        id="basic-addon1"></span>
+    </div>
+  </div> -->
+  <!-- Anther templete -->
+  <!-- Anther templete -->
+
+
+
+</ng-template>
+
+<!-- template -->
+<!-- template -->

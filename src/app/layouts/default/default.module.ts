@@ -8,6 +8,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { WidgetCarouselComponent } from './widgets/widget-carousel/widget-carousel.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { UserWishListComponent } from './user-wish-list/user-wish-list.component';
+import { CartListComponent } from './cart-list/cart-list.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     WidgetCarouselComponent,
     ProductListComponent,
     ProductDetailsComponent,
+    UserWishListComponent,
+    CartListComponent,
   ],
   imports: [
     CommonModule,

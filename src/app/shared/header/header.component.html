@@ -11,10 +11,10 @@
 
       <li class="nav-item d-block d-sm-none" (click)="toggleNavbar()">
           <!-- <a routerLink="/Default/Home"><i class="fa fa-home text-white" aria-hidden="true"></i></a> -->
-          <a  class="nav-link includer" routerLink="/User/Cart" routerLinkActive="active"
+          <a  class="nav-link includer" (click)="toggleNavbar()" routerLink="/Default/Cart" routerLinkActive="active"
               >
               <i class="shopping-cart mmm"></i>
-              <span class="badge badge-warning mm">10</span>
+              <span class="badge badge-warning mm">4</span>
           </a>
       </li>
       <button  class="navbar-toggler align-self-center" type="button" (click)="toggleNavbar()">
@@ -35,21 +35,26 @@
                   </a>
               </li>
               <li class="nav-item m-1" >
+                <a class="nav-link" routerLink="/Default/Wish" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}" (click)="toggleNavbar()">Wish
+                </a>
+            </li>
+              <li class="nav-item m-1" >
                 <a class="nav-link" routerLink="/Default/" routerLinkActive="active"
                 [routerLinkActiveOptions]="{exact: true}" (click)="toggleNavbar()">Deals
                 </a>
             </li>
-              <li class="nav-item m-1 " >
+              <!-- <li class="nav-item m-1 " >
                   <a class="nav-link" routerLink="/Admin" routerLinkActive="active"
                   [routerLinkActiveOptions]="{exact: true}" (click)="toggleNavbar()">Admin</a>
-              </li>
+              </li> -->
           </ul>
           <ul class="navbar-nav align-self-center">
               <li class="nav-item d-none d-sm-block">
-                  <a  class="nav-link includer"  routerLink="/User/Cart" routerLinkActive="active"
+                  <a  class="nav-link includer" (click)="toggleNavbar()"  routerLink="/Default/Cart" routerLinkActive="active"
                       >
                       <i  class="shopping-cart nnn"></i>
-                      <span class="badge badge-warning nn">10</span>
+                      <span class="badge badge-warning nn">4</span>
                   </a>
               </li>
 

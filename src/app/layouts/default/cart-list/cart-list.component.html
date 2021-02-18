@@ -1,0 +1,164 @@
+<!-- <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner> -->
+<div class="row pt-3">
+  <div class="col">
+    <button class="btn btn-outline-secondary mr-1 mb-2 mr-auto" (click)="showCart()">
+      <i class="fa fa-th-large text-primary" aria-hidden="true"></i>
+    </button>
+    <button class="btn  btn-outline-secondary d-inline mr-1 mb-2 mr-auto" (click)="showTable()">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+  </div>
+
+</div>
+<!-- ======================Card component =================================== -->
+<div *ngIf="isToggle===true" class="row">
+  <!-- ================== list component========================= -->
+  <div class="col-md-8">
+    <div class="row p-0 m-0">
+      <div class="card col-md-6 mb-2 p-0 m-0"  [ngClass]="{'fade-out': index === i?true:false}"
+        *ngFor="let item of details | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize ; index as i">
+        <div class="media">
+          <div class="align-self-start">
+            <img src="{{item.imgUrl}}" class="float-left border"
+              style="border-radius: 7%;width: 5rem; height: 5rem;vertical-align: middle;">
+          </div>
+          <div class="media-body text-left ml-2">
+            <span>
+              <div class="text-info ml-2 pt-0 pb-0 mt-0 mb-0 font-weight-bolder">{{item.productName}}
+                <div class="badge p-0 m-0">
+                  <i (click)="delete(i)" class=" fa fa-times btn btn-sm btn-outline-secondary d-inline"></i>
+
+                </div>
+              </div>
+              <p class="font-weight-bolder text-dark ml-2 d-inline pt-0 pb-0 mt-0 mb-0 ">
+                {{item.price |currency}}</p>
+              <p class="font-weight-bolder text-danger ml-2 d-inline pt-0 pb-0 mt-0 mb-0">
+                {{item.discount}}%</p>
+              <p class="font-weight-bolder text-primary ml-2 d-inline pt-0 pb-0 mt-0 mb-0">
+                {{item.quantityOut}}</p>
+              <p class="font-weight-bolder text-success ml-2  pt-0 pb-0 mt-0 mb-0">Total
+                <!-- {{ (item.quantityOut|di) * (item.price |number- (item.price |number* item.discount|number/100)) | currency }} -->
+             55
+              </p>
+66
+              <!-- {{ item.quantityOut * (item.price - (item.price * item.discount/100)) | currency }} -->
+
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- +++++-->
+    <ngb-pagination [pageSize]="pageSize" [collectionSize]="details.length" [(page)]="page" [boundaryLinks]="true">
+    </ngb-pagination>
+  </div> <!-- col.// -->
+  <!-- ================== list component========================= -->
+
+  <!-- ================== calculte component ==================== -->
+
+  <div class="col-md-4" >
+    <div class="card">
+      <div class="card-header p-0 m-0">
+        <div class="input-group ">
+          <input class="form-control font-weight-bolder" placeholder="Promo Code">
+          <div class="input-group-prepend">
+            <span class="btn  btn-primary text-white">
+              <span class="fa fa-check"></span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+      <div class="card-body pl-1 p-0 m-0">
+        <div class="form-group row p-0 m-0 ">
+          <label class="col-5 p-2 pr-0 pl-0 col-form-label  text-secondary font-weight-bolder ">Total:</label>
+          <label class="col-7 p-2 pr-0 pl-0
+                  col-form-label align-items-center font-weight-bolder">{{GetBeforTotal()|currency}}</label>
+        </div>
+        <div class="form-group row p-0 m-0 ">
+          <label class="col-5 p-2 pr-0 pl-0  col-form-label  text-secondary font-weight-bolder ">Disc:</label>
+          <label class="col-7 p-2 pr-0 pl-0
+                    col-form-label align-items-center font-weight-bolder">{{GetDiscountTotal()|currency}}</label>
+        </div>
+        <div class="form-group row p-0 m-0 ">
+          <label class="col-5 p-2 pr-0 pl-0  col-form-label  text-secondary font-weight-bolder ">Net:</label>
+          <label class="col-7 p-2 pr-0 pl-0
+                  col-form-label align-items-center font-weight-bolder">{{GetNetTotal()|currency}}</label>
+        </div>
+      </div>
+      <!-- <button class="btn btn-outline-primary btn-block" type="submit" (click)="onSubmite()"> -->
+
+      <button class="btn btn-outline-primary btn-block" type="submit">
+        <span class="spinner-grow spinner-grow-sm text-primary " role="status" aria-hidden="true"></span>
+        Submit
+        <i class="fa fa-cart-plus "></i>
+      </button>
+      <button class="btn btn-outline-danger btn-block" (click)="deleteAll()">
+        DeleteAll <i class="fa fa-trash"></i>
+      </button>
+
+    </div> <!-- col.// -->
+  </div>
+
+  <!-- ================== calculte component ==================== -->
+</div>
+<!-- ======================Card component =================================== -->
+<!-- ====================== Table component  =============================== -->
+<div class="row" *ngIf="isToggle===false">
+  <div class="col">
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-hover table-condensed flip-content">
+        <thead>
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Discount</th>
+            <th scope="col">Total</th>
+            <th>Option</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let item of details | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize ; index as i">
+            <td>{{ item.productName }}</td>
+            <td>{{ item.quantityOut |number}}</td>
+            <td>{{ item.price | currency }}</td>
+            <td>{{ item.discount }}%</td>
+            <!-- <td>{{ item.quantityOut * (item.price - (item.price * item.discount/100)) | currency }}</td> -->
+            <td> i100$</td>
+
+            <td (click)="delete(i)"> <i class="fa fa-times btn btn-outline-danger"></i></td>
+          </tr>
+        </tbody>
+        <tfoot class="text-center">
+          <th class="p-0">
+            <!-- <button class="btn btn-outline-primary btn-block" type="submit" (click)="onSubmite()"> -->
+            <button class="btn btn-outline-primary btn-block" type="submit">
+              <span class="spinner-grow spinner-grow-sm text-primary " role="status" aria-hidden="true"></span>
+              Submit
+              <i class="fa fa-cart-plus "></i>
+            </button>
+          </th>
+          <th class="p-0">
+            <button class="btn btn-outline-danger btn-block" (click)="deleteAll()">
+              DeleteAll <i class="fa fa-trash"></i>
+            </button>
+          </th>
+          <th class="bg-info p-2 text-white siz-font">Dis: {{GetDiscountTotal()|currency}}</th>
+          <th class="bg-warning p-2 text-white siz-font">Befor: {{GetBeforTotal()|currency}}</th>
+          <th colspan="2" class="bg-success  p-2 text-white siz-font">Net: {{GetNetTotal()|currency}}</th>
+        </tfoot>
+      </table>
+    </div>
+    <ngb-pagination class="my-pagination" [pageSize]="pageSize" [collectionSize]="details.length" [(page)]="page"
+    [boundaryLinks]="true">
+  </ngb-pagination>
+
+  </div>
+</div>
+<!-- ====================== Table component  =============================== -->

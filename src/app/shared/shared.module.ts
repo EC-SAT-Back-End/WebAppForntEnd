@@ -32,7 +32,8 @@ import { WishListComponent } from './wish-list/wish-list.component';
 
     // Component
     HeaderComponent, FooterComponent,ShopListComponent,
-    ShopDetailsComponent,CategoryListComponent,CategoryDetailsComponent
+    ShopDetailsComponent,CategoryListComponent,CategoryDetailsComponent,
+    WishListComponent
   ],
   entryComponents:[]
 })

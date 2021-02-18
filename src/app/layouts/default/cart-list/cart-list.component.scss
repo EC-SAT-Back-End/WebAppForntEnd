@@ -1,0 +1,36 @@
+table th,td {
+  text-align: center !important;
+}
+.marg{
+  margin-top: 25px;
+}
+
+// bage
+
+ .badge{
+  position: absolute;
+  top: 0;
+  right: 0 !important;
+}
+// bage
+// delete animation
+@keyframes fadeout{
+ 0%{  transform:scale(1);}
+ 50%{ transform:scale(1.1);}
+ 100%{ transform:scale(0);}
+ }
+
+ .fade-out{
+  animation: fadeout 2s linear;
+ }
+
+// pagination
+.my-pagination::ng-deep .page-item.active .page-link {
+  z-index: 1;
+  color: #FFFFFF;
+  // background-color:red !important;
+  background-color: #d72323 !important;
+  border-color: #009DA0;
+}
+
+
