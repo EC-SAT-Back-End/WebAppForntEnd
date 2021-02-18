@@ -1,0 +1,51 @@
+[
+  {
+    "id": "101",
+    "masterId": "1",
+    "productId": "1002254",
+    "productName": "Apple",
+    "quantityIn": "0",
+    "quantityOut": "1",
+    "balance": "0",
+    "price": "15",
+    "discount": "10",
+    "imgUrl":"assets/img/applee.jpg"
+  },
+  {
+    "id": "101",
+    "masterId": "1",
+    "productId": "1002255",
+    "productName": "Men Shirt",
+    "quantityIn": "0",
+    "quantityOut": "1",
+    "balance": "0",
+    "price": "100",
+    "discount": "3",
+    "imgUrl":"assets/img/manShirt.jpg"
+  },
+  {
+    "id": "101",
+    "masterId": "1",
+    "productId": "1002256",
+    "productName": "Men Pents",
+    "quantityIn": "0",
+    "quantityOut": "1",
+    "balance": "0",
+    "price": "150",
+    "discount": "2",
+    "imgUrl":"assets/img/menPants.jpg"
+  },
+  {
+    "id": "101",
+    "masterId": "1",
+    "productId": "1002258",
+    "productName": "Women Pants",
+    "quantityIn": "0",
+    "quantityOut": "1",
+    "balance": "0",
+    "price": "150",
+    "discount": "2",
+    "imgUrl":"assets/img/womenPants.jpg"
+  }
+
+]
